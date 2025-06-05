@@ -1,0 +1,16 @@
+# @package skill_selector
+_target_: skill_selector.sac.SkillSelectorAgent
+obs_shape: ??? # to be specified later
+skill_dim: 16
+device: ${device}
+critic_lr: 3e-4
+actor_lr: 3e-4
+feature_dim: 256
+hidden_dim: 256
+
+update_every_steps: 50
+
+# epsilon greedy
+epsilon_start: 1.0
+epsilon_end: 0.01
+epsilon_decay: 20000

@@ -1,0 +1,40 @@
+# This file is based on
+# https://github.com/Baichenjia/CeSD/blob/main/agent/cesd.yaml
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# This file has been modified for the AMPED
+# Note: Author information anonymized for double-blind review.
+
+# @package agent
+_target_: agent.cesd.CeSDAgent
+name: cesd
+domain: ${domain}
+ensemble_size: 16 # 16 for default setting
+reward_free: ${reward_free}
+obs_type: ??? # to be specified later
+obs_shape: ??? # to be specified later
+action_shape: ??? # to be specified later
+device: ${device}
+lr: 1e-4
+critic_target_tau: 0.01
+update_every_steps: 2
+use_tb: ${use_tb}
+use_wandb: ${use_wandb}
+num_expl_steps: 2000
+hidden_dim: 1024
+feature_dim: 1024
+stddev_schedule: 0.2
+stddev_clip: 0.3
+scale: 1.0
+update_skill_every_step: 50
+nstep: 3
+batch_size: 1024
+project_skill: true
+init_critic: true
+rew_type: og
+update_rep: true
+temp: 0.5
+update_encoder: False
+
+proto_T: 0.1
+proto_num_iters: { "walker": 6, "quadruped": 5, "jaco": 4 }
+constrain_factor: { "walker": 1.0, "quadruped": 1.0, "jaco": 0.1 }
