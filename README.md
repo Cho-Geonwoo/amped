@@ -1,5 +1,8 @@
 # AMPED: Adaptive Multi-objective Projection for balancing Exploration and skill Diversification
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![arXiv](https://img.shields.io/badge/arXiv-2506.05980-b31b1b.svg)](https://arxiv.org/abs/2506.05980)
+
 <img src="assets/amped.png"/>
 
 AMPED (Adaptive Multi-objective Projection for Exploration and skill Diversification) is a skill-based reinforcement learning algorithm designed to explicitly balance exploration and skill diversity. AMPED integrates entropy and RND based exploration with contrastive skill separation, and resolves conflicting learning signals using gradient surgery.
